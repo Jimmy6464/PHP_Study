@@ -1,0 +1,70 @@
+<?php
+	/*
+		布尔型 TRUE FALSE
+		为布尔型：
+		1.FALSE 2. 0 3. 0.0 4空字符串为假 5.字符串0为假
+		6.NULL为假 7.空数组为假 
+		除了以上情况均为真
+	*/
+	echo "<h1>数据类型之布尔型(boolean) TRUE or FALSE</h1>";
+
+	$a=100;
+	if($a==100){
+		echo $a."<br>";
+	}
+	
+	$name = $_GET['uname'];
+	if($name){
+		echo "your name is ".$name;
+	}else {
+		echo "plz' input your name";
+	}
+?>
+<html>
+	<head></head>
+	<body>
+		<form action='' method=''>
+			<input type="text" name="uname"><br/>
+			<input type="submit" value="submit">
+		</form>
+	</body>
+</html>
+
+<?php
+/*
+	数组
+*/
+	echo "<h1>数组</h1>";
+	$names = ["Jimmy","King","Sabira","Kimmy","Yimmy"];
+	$i = 0;
+	while(TRUE){
+		echo $names[$i]."<br>";
+		$i ++;
+		if($i>=5){
+			break;
+		}
+	}
+	var_dump($names);
+	/*
+	对象
+	*/
+	class person{
+		public $age;
+		function say(){
+			echo "I am 10 years old";
+		}
+	}
+	$jimmy = new person();
+	$jimmy->age = 10;
+
+	echo "property is ".$jimmy->age."<br>";
+	echo $jimmy->say();
+	/*
+		NULL
+	*/
+	$newOne = "Jimmy";
+	var_dump($newOne);
+	//unset($newOne);//移除变量
+	$newOne = NULL;
+	var_dump($newOne);
+?>
